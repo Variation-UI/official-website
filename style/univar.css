@@ -1,0 +1,18 @@
+@font-face {
+    font-family: varsans-reg;
+    src: url(../fonts/VARIATIONSans-Regular.ttf);
+}
+
+body {
+    font-family: varsans-reg;
+    background-color: #000008;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#content {
+    max-width: 1440px;
+    width: 100%;
+}
