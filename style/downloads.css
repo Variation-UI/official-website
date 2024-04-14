@@ -1,0 +1,104 @@
+.stepNum {
+    font-size: 496px;
+    line-height: 396px;
+    user-select: none;
+    position: sticky;
+    color: #091030;
+    top: 128px;
+    margin-right: -52px;
+    z-index: -10;
+}
+
+@media (min-width: 900px) {
+    #stepTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 472px;
+        }
+
+        p {
+            text-align: start;
+        }
+    }
+
+    .content {
+        padding: 20px 72px;
+    }
+
+    div#brands {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .brandBtn {
+        width: 25%;
+    }
+
+    .logo {
+        background-image: url(../sources/logo-desktop.png);
+        height: 52px;
+        width: 260px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 500px) {
+    #stepTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 396px;
+        }
+
+        p {
+            text-align: start;
+        }
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 500px) {
+    #stepTitle {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h1 {
+            font-size: 36px;
+            line-height: 48px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}

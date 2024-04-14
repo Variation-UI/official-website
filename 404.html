@@ -7,11 +7,17 @@
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/univar.css">
+    <link rel="stylesheet" type="text/css" href="./style/downloads.css">
     <link rel="icon" href="./sources/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
-    <div id="content">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+    <div id="content-downloads">
         <header>
             <input type="checkbox" id="toggler">
 
@@ -110,91 +116,32 @@
                 </svg>
             </div>
         </header>
-        <div id="intro" class="content">
-            <span class="h1Box">
-                <h1>
-                    <div class="logo"></div>
-                    INTRODUCEING<br>
-                    YOUR<br>
-                    NEW PHONE.
-                </h1>
-                <p>
-                    pick your device brand to get started.
-                </p>
-            </span>
-            <img src="./sources/intro.png">
-        </div>
-        <div id="brands" class="content">
-            <li class="brandBtn" id="google">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48"
-                    height="48" viewBox="0 0 48 48" fill="none">
-                    <path stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linejoin="round"
-                        d="M24 23.97L44.5 23.97C44.5 35.568 35.3218 44.97 24 44.97C12.6782 44.97 3.5 35.568 3.5 23.97C3.5 12.372 12.6782 2.97 24 2.97C29.7064 2.97 34.8682 5.35842 38.5848 9.21263">
-                    </path>
-                    <path stroke="url(#linear_border_18_23_0)" stroke-width="2"
-                        d="M5.02249 31.9264C4.04106 29.4725 3.5 26.786 3.5 23.97C3.5 12.372 12.6782 2.97 24 2.97C29.7064 2.97 34.8682 5.35842 38.5848 9.21263">
-                    </path>
-                    <defs>
-                        <radialGradient id="linear_border_18_23_0" cx="0" cy="0" r="1"
-                            gradientTransform="translate(3.5 17.44819450378418) rotate(90) scale(35.0848388671875, 35.0848388671875)"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.1181" stop-color="#3E47F0" />
-                            <stop offset="0.4931" stop-color="#68ABF7" />
-                            <stop offset="0.8889" stop-color="#68DFF7" />
-                        </radialGradient>
-                    </defs>
-                </svg>
-                <p>Google</p>
-            </li>
-            <li class="brandBtn" id="google">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48"
-                    height="48" viewBox="0 0 48 48" fill="none">
-                    <path
-                        d="M42.014 42.0216C45.2379 38.7975 46.8499 32.7973 46.85 24.0211C46.8503 15.2356 45.2347 9.23165 42.0032 6.00917L42.0031 6.00908L42.0029 6.00888L42.0015 6.0075L42.0013 6.00728C38.7506 2.7691 32.7502 1.15001 24 1.15C15.2404 1.15 9.23439 2.77487 5.98191 6.02462C2.76064 9.24331 1.15 15.2421 1.14999 24.0211C1.14999 32.8025 2.76217 38.8029 5.98651 42.0222C9.21009 45.2407 15.2146 46.8499 24 46.85C32.7903 46.8496 38.7949 45.2401 42.014 42.0216ZM7.39556 7.43939C10.2574 4.57976 15.7922 3.14997 24 3.15C32.1991 3.14999 37.7289 4.57467 40.5896 7.42406C43.4298 10.2551 44.8499 15.7874 44.85 24.0211C44.8496 32.2452 43.4329 37.7739 40.5998 40.6074C37.7714 43.4357 32.2381 44.8499 24 44.85C15.7665 44.8496 10.233 43.4352 7.39961 40.6068C4.56654 37.778 3.15 32.2494 3.14999 24.0211C3.15 15.7946 4.56519 10.2674 7.39556 7.43939Z"
-                        fill-rule="evenodd" fill="url(#linear_fill_18_49)">
-                    </path>
-                    <path
-                        d="M11.6198 17.4705C11.6198 17.141 11.7495 16.877 12.009 16.6785L12.0095 16.6771C12.0135 16.666 12.0208 16.6552 12.0314 16.6446C12.1475 16.5285 12.3436 16.4705 12.6198 16.4705L21.1973 16.4705C24.3526 16.4705 26.5208 17.0443 27.7019 18.1919C28.7973 19.2564 29.3451 21.1494 29.3452 23.871L29.3452 26.2946L29.3453 31.8932C29.3453 31.9208 29.323 31.9432 29.2953 31.9432L27.3953 31.9432C27.3677 31.9432 27.3453 31.9208 27.3453 31.8932L27.3452 26.2946L27.3452 23.871C27.3451 21.713 26.9994 20.2981 26.3081 19.6262C25.5151 18.8557 23.8115 18.4705 21.1973 18.4705L13.6198 18.4705L13.6199 31.8932C13.6199 31.9208 13.5975 31.9432 13.5699 31.9432L11.6699 31.9432C11.6423 31.9432 11.6199 31.9208 11.6199 31.8932L11.6198 17.4705ZM36.2994 16.5437L36.2994 31.9472L34.4615 31.9472L34.4615 16.5437L36.2994 16.5437ZM19.4305 22.8418L19.4305 31.8793C19.4305 31.907 19.4529 31.9293 19.4805 31.9293L21.3805 31.9293C21.4081 31.9293 21.4305 31.907 21.4305 31.8793L21.4305 22.8918C21.4305 22.8642 21.4081 22.8418 21.3805 22.8418L19.4305 22.8418Z"
-                        fill-rule="evenodd" fill="#FFFFFF">
-                    </path>
-                    <defs>
-                        <radialGradient id="linear_fill_18_49" cx="0" cy="0" r="1"
-                            gradientTransform="translate(1.149993896484375 24.000001907348633) rotate(90) scale(45.69999694824219, 45.69999694824219)"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.1181" stop-color="#3E47F0" />
-                            <stop offset="0.4931" stop-color="#68ABF7" />
-                            <stop offset="0.8889" stop-color="#68DFF7" />
-                        </radialGradient>
-                    </defs>
-                </svg>
-                <p>Xiaomi</p>
-            </li>
-            <li class="brandBtn" id="google">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48"
-                    height="48" viewBox="0 0 48 48" fill="none">
-                    <path stroke="url(#linear_border_18_31_0)" stroke-width="2" stroke-linejoin="round"
-                        d="M41.3033 23.97L41.3033 44.97L3.30331 44.97L3.30331 6.97L24.3033 6.97">
-                    </path>
-                    <path fill-rule="evenodd" stroke="rgba(255, 255, 255, 1)" stroke-width="2"
-                        d="M41 0.0666866L41 6.97M41 6.97L41 14.0667M34 6.97L41 6.97M41 6.97L48 6.97">
-                    </path>
-                    <path stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linejoin="round"
-                        d="M17.5 22.17C20.5 22.17 23 19.67 23.5 17.17L23.5 36.17">
-                    </path>
-                    <defs>
-                        <radialGradient id="linear_border_18_31_0" cx="0" cy="0" r="1"
-                            gradientTransform="translate(3.303314208984375 25.970001220703125) rotate(90) scale(38, 38)"
-                            gradientUnits="userSpaceOnUse">
-                            <stop offset="0.1181" stop-color="#3E47F0" />
-                            <stop offset="0.4931" stop-color="#68ABF7" />
-                            <stop offset="0.8889" stop-color="#68DFF7" />
-                        </radialGradient>
-                    </defs>
-                </svg>
-                <p>OnePlus</p>
-            </li>
-        </div>
-    </div>
+        <span>
+            <div id="notfoundIndex" class="content">
+                <span class="h1Box">
+                    <h8>
+                        <script>
+                            var strArry = new Array("(>_<)", "(x_x)", "(o_o)", "(@_@;)");
+                            var adv;
+                            adv = strArry[parseInt(Math.random() * 6)];
+                            document.write(adv);
+                        </script>
+                    </h8>
+                    <h2>Here is no anything</h2>
+                    <p>Sorry, the page
+                        <span>
+                            <script>
+                                var url;
+
+                                url = window.location.pathname; /* 获取文件路径（文件地址） */
+                                document.write("." + url); /* /Test/index.html */
+                            </script>
+                        </span>
+                        could not be found.
+                    </p>
+                </span>
+            </div>
+        </span>
 </body>
 
 </html>

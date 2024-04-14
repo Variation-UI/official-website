@@ -27,9 +27,24 @@
     .brandBtn {
         width: 25%;
     }
+
+    .logo {
+        background-image: url(../sources/logo-desktop.png);
+        height: 52px;
+        width: 260px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 500px) {
     #intro {
         display: flex;
         flex-direction: row;
@@ -58,6 +73,21 @@
     .brandBtn {
         width: 50%;
     }
+
+    .logo {
+        background-image: url(../sources/logo-desktop.png);
+        height: 52px;
+        width: 260px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
 @media (max-width: 500px) {
@@ -74,10 +104,17 @@
             font-size: 36px;
             line-height: 48px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            svg {
-                height: 48px;
-                width: 218px;
+            .logo {
+                background-image: url(../sources/logo-phone.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 44px;
+                width: 275px;
             }
         }
 
@@ -111,7 +148,9 @@ h1 {
     vertical-align: top;
 }
 
-#intro {
+#intro,
+#stepTitle,
+#notfoundIndex {
     p {
         font-size: 16px;
         font-weight: normal;
@@ -119,6 +158,16 @@ h1 {
         line-height: 24px;
         max-width: 410px;
         color: #ffffffbf;
+        vertical-align: top;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 0px;
+        line-height: 52px;
+        color: #FFFFFF;
+        text-align: left;
         vertical-align: top;
     }
 }
@@ -133,5 +182,66 @@ h1 {
     p {
         font-size: 24px;
         color: #ffffff;
+        opacity: 0.75;
+        transition: all .15s ease-in;
+        z-index: 2;
+    }
+}
+
+.brandBtn:hover {
+    p {
+        opacity: 1;
+    }
+}
+
+#notfoundIndex {
+    height: calc(100vh - 172px);
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 64px;
+        font-weight: normal;
+        letter-spacing: -1px;
+        line-height: 52px;
+        color: #FFFFFF;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    h8 {
+        font-size: 128px;
+        line-height: 164px;
+        text-align: start;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 100;
+        margin-left: -25px;
+        color: #ffffffbd;
+    }
+
+    h8::selection {
+        color: #FFFFFF;
+        font-weight: 150;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            background-color: #091030;
+            color: #FFFFFF;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 14px;
+        }
+
+        span::selection {
+            color: rgb(104, 171, 247);
+            font-weight: 500;
+            box-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+        }
     }
 }

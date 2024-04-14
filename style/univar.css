@@ -12,7 +12,36 @@ body {
     justify-content: center;
 }
 
+h1, p {
+    overflow: visible;
+}
+
+h1::selection {
+    color: rgb(104, 171, 247);
+    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+}
+
+h2::selection {
+    color: rgb(104, 171, 247);
+    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+}
+
+p::selection {
+    color: rgba(104, 171, 247, 0.85);
+    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+}
+
+br {
+    user-select: none;
+}
+
 #content {
+    max-width: 1440px;
+    width: 100%;
+}
+
+#content-downloads {
+    overflow-y: visible;
     max-width: 1440px;
     width: 100%;
 }
