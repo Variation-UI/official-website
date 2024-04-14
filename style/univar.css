@@ -16,3 +16,8 @@ body {
     max-width: 1440px;
     width: 100%;
 }
+
+li {
+    display: flex;
+    cursor: pointer;
+}

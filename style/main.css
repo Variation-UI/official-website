@@ -1,6 +1,5 @@
 @media (min-width: 900px) {
     #intro {
-        padding: 20px 72px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -9,43 +8,96 @@
         img {
             height: 472px;
         }
+
+        p {
+            text-align: start;
+        }
+    }
+
+    .content {
+        padding: 20px 72px;
+    }
+
+    div#brands {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .brandBtn {
+        width: 25%;
     }
 }
 
 @media (max-width: 900px) {
     #intro {
-        padding: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
         img {
-            height: 472px;
+            height: 396px;
         }
+
+        p {
+            text-align: start;
+        }
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    div#brands {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .brandBtn {
+        width: 50%;
     }
 }
 
 @media (max-width: 500px) {
     #intro {
-        padding: 20px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
 
         img {
-            height: 256px;
+            height: 396px;
         }
 
         h1 {
             font-size: 36px;
             line-height: 48px;
-            
+            text-align: center;
+
             svg {
                 height: 48px;
                 width: 218px;
             }
         }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    div#brands {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .brandBtn {
+        width: 100%;
     }
 }
 
@@ -59,12 +111,27 @@ h1 {
     vertical-align: top;
 }
 
-p {
-    font-size: 16px;
-    font-weight: normal;
-    letter-spacing: -0.5px;
-    line-height: 24px;
-    color: #ffffffbf;
-    text-align: left;
-    vertical-align: top;
+#intro {
+    p {
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: -0.5px;
+        line-height: 24px;
+        max-width: 410px;
+        color: #ffffffbf;
+        vertical-align: top;
+    }
+}
+
+.brandBtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0px;
+    gap: 32px;
+
+    p {
+        font-size: 24px;
+        color: #ffffff;
+    }
 }
