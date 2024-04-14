@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variation UI | Introduceing your new phone</title>
-    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/main.css">
     <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/menu.css">
     <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/univar.css">
-    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/downloads.css">
+    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/downloads.css"> -->
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <link rel="stylesheet" type="text/css" href="./style/menu.css">
+    <link rel="stylesheet" type="text/css" href="./style/univar.css">
+    <link rel="stylesheet" type="text/css" href="./style/downloads.css">
+    <link rel="stylesheet" type="text/css" href="./style/notfound.css">
     <link rel="icon" href="https://variation-ui.github.io/website-new/sources/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +22,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
     </style>
-    <div id="content-downloads">
+    <div id="content">
         <header>
             <input type="checkbox" id="toggler">
 
@@ -118,28 +123,26 @@
         </header>
         <span>
             <div id="notfoundIndex" class="content">
-                <span class="h1Box">
-                    <h8>
+                <h8>
+                    <script>
+                        var strArry = new Array("(>_<)", "(x_x)", "(o_o)", "(@_@;)");
+                        var adv;
+                        adv = strArry[parseInt(Math.random() * 4)];
+                        document.write(adv);
+                    </script>
+                </h8>
+                <h2>There's nothing here</h2>
+                <p>Sorry, the page
+                    <span>
                         <script>
-                            var strArry = new Array("(>_<)", "(x_x)", "(o_o)", "(@_@;)");
-                            var adv;
-                            adv = strArry[parseInt(Math.random() * 6)];
-                            document.write(adv);
-                        </script>
-                    </h8>
-                    <h2>Here is no anything</h2>
-                    <p>Sorry, the page
-                        <span>
-                            <script>
-                                var url;
+                            var url;
 
-                                url = window.location.pathname; /* 获取文件路径（文件地址） */
-                                document.write("." + url); /* /Test/index.html */
-                            </script>
-                        </span>
-                        could not be found.
-                    </p>
-                </span>
+                            url = window.location.pathname; /* 获取文件路径（文件地址） */
+                            document.write("." + url); /* /Test/index.html */
+                        </script>
+                    </span>
+                    could not be found.
+                </p>
             </div>
         </span>
 </body>
