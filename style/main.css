@@ -1,4 +1,32 @@
+#pagetitle {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+
+    p {
+        margin: 0;
+    }
+}
+
 @media (min-width: 900px) {
+    #pagetitle {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: #091030;
+        border-radius: 18px;
+        margin: 20px;
+        font-size: 48px;
+
+        p {
+            line-height: 26px;
+            font-size: 16px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+    }
+
     #intro {
         display: flex;
         flex-direction: row;
@@ -45,6 +73,24 @@
 }
 
 @media (max-width: 900px) and (min-width: 500px) {
+    #pagetitle {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #091030;
+        border-radius: 18px;
+        margin: 8px;
+        font-size: 48px;
+
+        p {
+            line-height: 26px;
+            font-size: 16px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+    }
+
     #intro {
         display: flex;
         flex-direction: row;
@@ -91,6 +137,24 @@
 }
 
 @media (max-width: 500px) {
+    #pagetitle {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #091030;
+        border-radius: 18px;
+        margin: 8px;
+        font-size: 48px;
+
+        p {
+            line-height: 26px;
+            font-size: 16px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+    }
+
     #intro {
         display: flex;
         flex-direction: column-reverse;
