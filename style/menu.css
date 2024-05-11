@@ -6,6 +6,32 @@ header {
     left: 0px;
     z-index: 6;
 
+    #logo {
+        svg {
+            #logoTop {
+                transition: all .3s ease-in-out 0s;
+                fill: #FFFFFF;
+            }
+
+            #logoBottom {
+                transition: all .3s ease-in-out 0s;
+                fill: #FFFFFF;
+            }
+        }
+    }
+
+    #logo:hover {
+        svg {
+            #logoTop {
+                fill: #68ABF7;
+            }
+
+            #logoBottom {
+                fill: #3E47F0;
+            }
+        }
+    }
+
     .menu {
         display: flex;
         justify-content: space-between;
@@ -22,31 +48,6 @@ header {
         .menuli:hover {
             color: #ffffff;
         }
-
-        /* .menuli:hover {
-            display: flex;
-            font-size: 13px;
-            line-height: 18px;
-            color: #ffffff;
-        } */
-
-        /* .menuHoverBar {
-            height: 1px;
-            width: 24px;
-            border-radius: 2px;
-            position: fixed;
-            top: 42px;
-            left: 0px;
-            opacity: 1;
-            transition: all .3s ease-in-out;
-            background: linear-gradient(90deg, #3e47f0 0%, #5278f2bf 50%, #68abf740 100%);
-        } */
-        
-        /* .about:hover+.menuHoverBar {
-            opacity: 1;
-            width: 64px;
-            left: 512px;
-        } */
     }
 }
 
@@ -70,6 +71,10 @@ header {
         background-color: #00000880;
         backdrop-filter: blur(25px);
         width: calc(100% - 144px);
+
+        #hoverMenuBox {
+            display: none;
+        }
 
         #arrow {
             position: fixed;
@@ -111,6 +116,10 @@ header {
         background-color: #00000880;
         backdrop-filter: blur(25px);
         width: calc(100% - 40px);
+
+        #hoverMenuBox {
+            display: none;
+        }
 
         #arrow {
             position: fixed;
@@ -232,10 +241,52 @@ header {
                 line-height: 30px;
                 opacity: 0.8;
                 transition: all .3s ease-in-out 0ms;
+
+                #hoverMenuBox {
+                    margin-top: 186px;
+                    position: fixed;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    padding: 20px 0px;
+                    transform: scaleY(0);
+                    transform-origin: center 0px;
+                    opacity: 0;
+                    transition: all .3s cubic-bezier(1, 0, 0, 1);
+
+                    li {
+                        display: flex;
+                        letter-spacing: 0;
+                        font-size: 20px;
+                    }
+                }
             }
 
             .menuli:hover {
                 opacity: 1;
+            }
+
+            #design {
+                #arrow {
+                    transform: rotate(0turn);
+                    transition: all .3s ease-in-out 0s;
+                }
+            }
+
+            #design:hover {
+                padding-bottom: 136px;
+
+                #arrow {
+                    position: static;
+                    display: block;
+                    transform: rotate(0.25turn);
+                    transition: all .3s ease-in-out 0s;
+                }
+
+                #hoverMenuBox {
+                    opacity: 1;
+                    transform: scaleY(1);
+                }
             }
         }
     }
