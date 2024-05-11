@@ -26,6 +26,11 @@ h2::selection {
     text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
 }
 
+h3::selection {
+    color: rgb(104, 171, 247);
+    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+}
+
 p::selection {
     color: rgba(104, 171, 247, 0.85);
     text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;

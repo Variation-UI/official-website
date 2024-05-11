@@ -10,6 +10,10 @@
 }
 
 @media (min-width: 900px) {
+    #downloadCard {
+        right: 15%;
+    }
+
     #stepTitle {
         display: flex;
         flex-direction: row;
@@ -56,6 +60,10 @@
 }
 
 @media (max-width: 900px) and (min-width: 500px) {
+    #downloadCard {
+        right: 0;
+    }
+
     #stepTitle {
         display: flex;
         flex-direction: row;
@@ -83,6 +91,10 @@
 }
 
 @media (max-width: 500px) {
+    #downloadCard {
+        right: unset;
+    }
+
     #stepTitle {
         display: flex;
         flex-direction: column-reverse;
@@ -101,4 +113,137 @@
             text-align: center;
         }
     }
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+}
+
+@media (max-width: 500px) {
+    #background {
+        background-image: url(../sources/download-bg-phone.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #downloadCard {
+        .content {
+            padding: 24px;
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    #background {
+        background-image: url(../sources/download-bg-desktop.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #downloadCard {
+        max-width: 50%;
+        height: calc(100% - 48px - 58px);
+        width: 348px;
+
+        .content {
+            padding: 24px;
+        }
+    }
+}
+
+header {
+    background: none;
+    backdrop-filter: unset;
+}
+
+#downloadCard {
+    background-color: #000008;
+    position: fixed;
+    z-index: 4;
+    margin: 24px;
+    border-radius: 24px;
+    overflow-y: hidden;
+    height: 496px;
+
+    h2 {
+        text-align: start;
+        /* font-family: "", monospace; */
+        font-weight: 100;
+        font-variant-ligatures: none;
+        color: #ffffffbd;
+        margin: 0;
+    }
+
+    h2::selection {
+        color: #FFFFFF;
+        font-weight: 150;
+    }
+
+    p {
+        color: #ffffffbd;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.content {
+    height: calc(100% - 44px);
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+
+    div#brands {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0;
+    }
+}
+
+.brandBtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0px;
+    flex-direction: column;
+    width: calc(50% - 6px);
+    gap: 10px;
+    background-color: #01040F;
+    border-radius: 10px;
+
+    p {
+        color: #ffffffbd;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        max-width: none;
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
+#brands {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.h1Box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
 }

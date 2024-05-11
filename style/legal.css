@@ -1,0 +1,15 @@
+.entry {
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+li {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}

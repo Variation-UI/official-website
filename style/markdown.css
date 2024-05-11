@@ -1,0 +1,53 @@
+#mdBox {
+    color: #ffffff;
+
+    h1 {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 50px;
+        margin-left: -52px;
+        margin-right: -52px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #091030;
+        border-radius: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    
+    p {
+        line-height: 26px;
+        opacity: 0.9;
+    }
+
+    ol, ul {
+        cursor: default;
+
+        p {
+            color: #ffffff;
+            line-height: normal;
+            display: list-item;
+            margin: .7em;
+            cursor: auto;
+        }
+
+        li {
+            cursor: default;
+
+            p {
+                line-height: normal;
+                margin: .5em;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+#text-input {
+    display: none;
+}
