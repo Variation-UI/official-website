@@ -31,6 +31,14 @@ h1 {
         }
     }
 
+    #mdBox {
+        color: #ffffff;
+        border-radius: 18px;
+        margin: 20px;
+        padding: 25px 50px;
+        border: solid 1px #091030;
+    }
+
     #intro {
         display: flex;
         flex-direction: row;
@@ -95,6 +103,14 @@ h1 {
         }
     }
 
+    #mdBox {
+        color: #ffffff;
+        border-radius: 18px;
+        margin: 8px;
+        padding: 10px 20px;
+        border: solid 1px #091030;
+    }
+
     #intro {
         display: flex;
         flex-direction: row;
@@ -157,6 +173,14 @@ h1 {
             opacity: 0.9;
             letter-spacing: 0.5px;
         }
+    }
+
+    #mdBox {
+        color: #ffffff;
+        border-radius: 18px;
+        margin: 8px;
+        padding: 10px 20px;
+        border: solid 1px #091030;
     }
 
     #intro {
