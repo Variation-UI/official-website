@@ -10,10 +10,15 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 58px;
 }
 
 h1, p {
     overflow: visible;
+}
+
+p {
+    color: #ffffff;
 }
 
 h1::selection {
@@ -54,4 +59,8 @@ br {
 li {
     display: flex;
     cursor: pointer;
+}
+
+iframe {
+    border: none;
 }
