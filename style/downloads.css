@@ -180,7 +180,7 @@ header {
     }
 
     h2::selection {
-        color: #FFFFFF;
+        color: var(--on-background);
         font-weight: 150;
     }
 

@@ -6,16 +6,20 @@ header {
     left: 0px;
     z-index: 6;
 
+    #downloadBtn {
+        fill: var(--on-background);
+    }
+
     #logo {
         svg {
             #logoTop {
                 transition: all .3s ease-in-out 0s;
-                fill: #FFFFFF;
+                fill: var(--on-background);
             }
 
             #logoBottom {
                 transition: all .3s ease-in-out 0s;
-                fill: #FFFFFF;
+                fill: var(--on-background);
             }
         }
     }
@@ -41,12 +45,16 @@ header {
             display: block;
             font-size: 13px;
             line-height: 18px;
-            color: #ffffffcc;
+            color: var(--on-background);
             transition: all .3s ease-in-out 0s;
+            opacity: 0.7;
+            border-bottom: solid 1px var(--none-on-background);
         }
 
         .menuli:hover {
-            color: #ffffff;
+            color: var(--on-background);
+            opacity: 1;
+            border-bottom: solid 1px var(--on-background);
         }
     }
 }
@@ -68,12 +76,53 @@ header {
 @media (min-width: 900px) {
     header {
         padding: 20px 72px;
-        background-color: #00000880;
-        backdrop-filter: blur(25px);
+        backdrop-filter: blur(40px);
         width: calc(100% - 144px);
 
-        #hoverMenuBox {
-            display: none;
+        #design {
+            #hoverMenuBox {
+                transform: scaleY(0);
+                transition: all .4s cubic-bezier(1, 0, 0, 1);
+                position: absolute;
+                width: auto;
+                display: flex;
+                /* left: 0; */
+                margin-left: -196px;
+                top: 35px;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 20px;
+                gap: 48px;
+                border-radius: 16px;
+
+                li {
+                    color: var(--none-on-background);
+                    transition: all .3s ease-in-out;
+                    text-transform: uppercase;
+                    border-bottom: solid 1px var(--none-on-background);
+                }
+            }
+        }
+
+        #design:hover {
+
+            #hoverMenuBox {
+                opacity: 1;
+                transform: scaleY(1);
+                position: absolute;
+                background-color: var(--menu-background);
+                top: 50px;
+
+                li {
+                    color: var(--on-background);
+                    border-bottom: solid 1px var(--none-on-background);
+                }
+
+                li:hover {
+                    color: var(--primary-color);
+                    border-bottom: solid 1px var(--primary-color);
+                }
+            }
         }
 
         #arrow {
@@ -101,7 +150,7 @@ header {
 
         .menu {
             width: 648px;
-            color: #ffffffcc;
+            color: var(--on-background)cc;
         }
 
         .menuHoverBar {
@@ -114,7 +163,7 @@ header {
     header {
         padding: 20px;
         background-color: #00000880;
-        backdrop-filter: blur(25px);
+        backdrop-filter: blur(40px);
         width: calc(100% - 40px);
 
         #hoverMenuBox {
@@ -145,6 +194,51 @@ header {
         .menuHoverBar {
             display: block;
         }
+
+        #design {
+            #hoverMenuBox {
+                transition: all .4s cubic-bezier(1, 0, 0, 1);
+                position: absolute;
+                width: auto;
+                display: flex;
+                /* left: 0; */
+                margin-left: -196px;
+                top: 35px;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 20px;
+                gap: 48px;
+                border-radius: 16px;
+
+                li {
+                    color: var(--none-on-background);
+                    transition: all .3s ease-in-out;
+                    text-transform: uppercase;
+                    border-bottom: solid 1px var(--none-on-background);
+                }
+            }
+        }
+
+        #design:hover {
+
+            #hoverMenuBox {
+                opacity: 1;
+                transform: scaleY(1);
+                position: absolute;
+                background-color: var(--menu-background);
+                top: 50px;
+
+                li {
+                    color: var(--on-background);
+                    border-bottom: solid 1px var(--none-on-background);
+                }
+
+                li:hover {
+                    color: var(--primary-color);
+                    border-bottom: solid 1px var(--primary-color);
+                }
+            }
+        }
     }
 }
 
@@ -152,14 +246,13 @@ header {
     #toggler:checked~.menu {
         transform: scaleY(1);
         opacity: 1;
+        fill: var(--on-background);
     }
 
     header {
         padding: 20px;
         width: calc(100% - 40px);
         width: calc(100% - 40px);
-        /* background-color: #00000880;
-        backdrop-filter: blur(25px); */
 
         label {
             transform: scaleX(1);
@@ -179,12 +272,14 @@ header {
                 transition: all .3s ease-in-out;
                 transform: rotate(0deg);
                 translate: 0px 0px;
+                fill: var(--on-background);
             }
 
             .bottom {
                 transition: all .3s ease-in-out;
                 transform: rotate(0deg);
                 translate: 0px 0px;
+                fill: var(--on-background);
             }
         }
 
@@ -193,18 +288,21 @@ header {
                 transition: all .3s ease-in-out;
                 transform: rotate(45deg) scaleX(1.25);
                 translate: 5.5px -3px;
+                fill: var(--on-background);
             }
 
             .bottom {
                 transition: all .3s ease-in-out;
                 transform: rotate(135deg) scaleX(1.25);
                 translate: 25px 9.75px;
+                fill: var(--on-background);
             }
         }
 
         #arrow {
             position: static;
             display: block;
+            fill: var(--on-background);
         }
 
         svg {
@@ -230,8 +328,7 @@ header {
             transform: scaleY(0);
             transition: all .4s cubic-bezier(1, 0, 0, 1);
             transform-origin: center 0px;
-            background-color: rgba(2, 4, 13, 0.75);
-            backdrop-filter: blur(26px);
+            background-color: var(--default-background);
 
             .menuli {
                 display: flex;
@@ -241,6 +338,7 @@ header {
                 line-height: 30px;
                 opacity: 0.8;
                 transition: all .3s ease-in-out 0ms;
+                border: none;
 
                 #hoverMenuBox {
                     margin-top: 186px;
@@ -264,6 +362,7 @@ header {
 
             .menuli:hover {
                 opacity: 1;
+                border: none;
             }
 
             #design {

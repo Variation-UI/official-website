@@ -3,9 +3,46 @@
     src: url(../fonts/VARIATIONSans-Regular.ttf);
 }
 
+:root {
+    --primary-color: #4B6BEB;
+    --secondary-color: #5783F4;
+    --darker-color: #3F49F0;
+    --lighter-color: #639EF6;
+    --primary-color-50: #4b6beb85;
+    --primary-color-25: #4b6beb25;
+    --secondary-color-50: #5783F485;
+    --darker-color-50: #3F49F085;
+    --lighter-color-50: #639EF685;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-background: #f8fbff;
+        --menu-background: #fcfdff;
+        --default-background: #E1E7F0;
+        --menu-main-background: #f8fbffbb;
+        --menu-default-background: #E1E7F0bb;
+        --on-background: #181818;
+        --on-background-hover: #181818b4;
+        --none-on-background: #18181800;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background: #000008;
+        --menu-background: #10101d;
+        --default-background: #02041A;
+        --menu-main-background: #000008bb;
+        --menu-default-background: #02041Abb;
+        --on-background: #FFFFFF;
+        --on-background-hover: #FFFFFFb4;
+        --none-on-background: #FFFFFF00;
+    }
+}
+
 body {
     font-family: varsans-reg;
-    background-color: #000008;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -13,32 +50,35 @@ body {
     padding-top: 58px;
 }
 
-h1, p {
+h1,
+p {
     overflow: visible;
 }
 
 p {
-    color: #ffffff;
+    color: var(--on-background);
 }
 
-h1::selection {
-    color: rgb(104, 171, 247);
-    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+@media (prefers-color-scheme: light) {
+    h1::selection, h2::selection, h3::selection {
+        color: var(--darker-color);
+    }
+
+    p::selection {
+        color: var(--primary-color);
+
+    }
 }
 
-h2::selection {
-    color: rgb(104, 171, 247);
-    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
-}
+@media (prefers-color-scheme: dark) {
+    h1::selection, h2::selection, h3::selection {
+        color: var(--lighter-color);
+    }
 
-h3::selection {
-    color: rgb(104, 171, 247);
-    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
-}
+    p::selection {
+        color: var(--secondary-color);
 
-p::selection {
-    color: rgba(104, 171, 247, 0.85);
-    text-shadow: rgba(104, 171, 247, 0.1) 1px 4px 18px;
+    }
 }
 
 br {
