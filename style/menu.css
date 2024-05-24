@@ -5,6 +5,7 @@ header {
     top: 0px;
     left: 0px;
     z-index: 6;
+    font-family: Wix Madefor Display, sans-serif;
 
     #downloadBtn {
         fill: var(--on-background);
@@ -49,12 +50,14 @@ header {
             transition: all .3s ease-in-out 0s;
             opacity: 0.7;
             border-bottom: solid 1px var(--none-on-background);
+            font-weight: 300;
         }
 
         .menuli:hover {
             color: var(--on-background);
             opacity: 1;
             border-bottom: solid 1px var(--on-background);
+            font-weight: 500;
         }
     }
 }
@@ -351,6 +354,8 @@ header {
                     transform-origin: center 0px;
                     opacity: 0;
                     transition: all .3s cubic-bezier(1, 0, 0, 1);
+                    margin-left: 0px;
+                    top: 0px;
 
                     li {
                         display: flex;
@@ -385,6 +390,8 @@ header {
                 #hoverMenuBox {
                     opacity: 1;
                     transform: scaleY(1);
+                    margin-left: 0px;
+                    top: 0px;
                 }
             }
         }

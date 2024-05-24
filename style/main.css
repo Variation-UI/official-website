@@ -1,12 +1,141 @@
 #pagetitle {
     display: flex;
-    gap: 12px;
+    gap: 28px;
     flex-direction: column;
+    align-items: center;
 
     p {
         margin: 0;
         text-transform: capitalize;
-        color: var(--on-background)
+        color: var(--on-background);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    span,
+    .infor,
+    .date {
+        margin: 0;
+        text-transform: capitalize;
+        color: var(--on-background);
+        font-size: 16px;
+        font-weight: 250;
+        letter-spacing: 0;
+        line-height: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .infor {
+        opacity: .75;
+    }
+}
+
+.authors {
+    background-color: var(--primary-color-25);
+    gap: 14px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        color: var(--on-background);
+        margin: 0;
+        font-size: 24px;
+    }
+
+    span,
+    .infor,
+    .date {
+        margin: 0;
+        text-transform: capitalize;
+        color: var(--on-background);
+        font-size: 15px;
+        font-weight: 250;
+        letter-spacing: 0;
+        line-height: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-family: "Wix Madefor Display", sans-serif;
+    }
+
+    .infor {
+        opacity: .75;
+    }
+
+
+    @media (min-width: 500px) {
+        .flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .flex {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 12px;
+
+        p {
+            border-bottom: solid 1px var(--none-on-background);
+            font-size: 15px;
+            user-select: none;
+            transition: all .3s ease-in-out;
+            font-weight: 300;
+            font-family: "Wix Madefor Display", sans-serif;
+        }
+
+        p:hover {
+            border-bottom: solid 1px var(--primary-color);
+            font-weight: 500;
+        }
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+            font-size: 15px;
+            line-height: 20px;
+            color: var(--on-background);
+            transition: all .3s ease-in-out;
+            opacity: 0.7;
+            border-bottom: solid 1px var(--none-on-background);
+            font-weight: 300;
+            font-family: "Wix Madefor Display", sans-serif;
+            letter-spacing: .5px;
+            padding-right: -2px;
+
+            #arrow {
+                display: block;
+
+                path {
+                    fill: var(--on-background);
+                    transform: translateX(2.5px) scale(1.15, 1);
+                    ;
+                }
+
+            }
+        }
+
+        li:hover {
+            color: var(--on-background);
+            opacity: 1;
+            border-bottom: solid 1px var(--on-background);
+            font-weight: 500;
+        }
     }
 }
 
@@ -39,21 +168,18 @@ h1 {
 }
 
 @media (min-width: 900px) {
-    #pagetitle {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        padding-left: 50px;
-        padding-right: 50px;
-        background-color: var(--primary-color-25);
+
+    #pagetitle,
+    .authors {
+        padding: 50px;
         border-radius: 18px;
         margin: 20px;
-        font-size: 48px;
+        font-size: 64px;
 
         p {
-            line-height: 26px;
-            font-size: 16px;
+            line-height: 30px;
             opacity: 0.9;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
     }
 
@@ -62,7 +188,6 @@ h1 {
         border-radius: 18px;
         margin: 20px;
         padding: 25px 50px;
-        border: solid 1px var(--primary-color-50);
     }
 
     #intro {
@@ -118,19 +243,19 @@ h1 {
 }
 
 @media (max-width: 900px) and (min-width: 500px) {
-    #pagetitle {
+
+    #pagetitle,
+    .authors {
         padding-top: 1em;
         padding-bottom: 1em;
         padding-left: 20px;
         padding-right: 20px;
-        background-color: var(--primary-color-25);
         border-radius: 18px;
         margin: 8px;
         font-size: 48px;
 
         p {
             line-height: 26px;
-            font-size: 16px;
             opacity: 0.9;
             letter-spacing: 0.5px;
         }
@@ -141,7 +266,6 @@ h1 {
         border-radius: 18px;
         margin: 8px;
         padding: 10px 20px;
-        border: solid 1px var(--primary-color-50);
     }
 
     #intro {
@@ -197,19 +321,19 @@ h1 {
 }
 
 @media (max-width: 500px) {
-    #pagetitle {
+
+    #pagetitle,
+    .authors {
         padding-top: 1em;
         padding-bottom: 1em;
         padding-left: 20px;
         padding-right: 20px;
-        background-color: var(--primary-color-25);
         border-radius: 18px;
         margin: 8px;
         font-size: 48px;
 
         p {
             line-height: 26px;
-            font-size: 16px;
             opacity: 0.9;
             letter-spacing: 0px;
         }
@@ -220,7 +344,6 @@ h1 {
         border-radius: 18px;
         margin: 8px;
         padding: 10px 20px;
-        border: solid 1px var(--primary-color-25);
     }
 
     #intro {
@@ -291,9 +414,6 @@ h1 {
 #stepTitle,
 #notfoundIndex {
     p {
-        font-size: 16px;
-        font-weight: normal;
-        letter-spacing: -0.5px;
         line-height: 24px;
         max-width: 410px;
         color: var(--on-background);

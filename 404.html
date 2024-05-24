@@ -4,23 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variation UI | Introduceing your new phone</title>
-    <!-- <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/main.css">
-    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/menu.css">
-    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/univar.css">
-    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/website-new/style/downloads.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/style/main.css">
+    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/style/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/style/univar.css">
+    <link rel="stylesheet" type="text/css" href="https://variation-ui.github.io/style/downloads.css">
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/univar.css">
     <link rel="stylesheet" type="text/css" href="./style/downloads.css">
-    <link rel="stylesheet" type="text/css" href="./style/notfound.css">
-    <link rel="icon" href="https://variation-ui.github.io/website-new/sources/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="https://variation-ui.github.io/sources/icon.png">
 </head>
 
 <body>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+        body {
+            background-color: var(--main-background);
+        }
+
+        header {
+            background-color: var(--menu-main-background);
+        }
+
+        @media (min-width: 900px) {
+            #notfoundIndex {
+                height: calc(100vh - 172px);
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+
+                h8 {
+                    font-size: 128px;
+                    line-height: 164px;
+                    text-align: start;
+                    font-family: "JetBrains Mono", monospace;
+                    font-weight: 100;
+                    font-variant-ligatures: none;
+                    margin-left: -25px;
+                    color: var(--on-background);
+                }
+
+                h8::selection {
+                    color: var(--on-background);
+                    font-weight: 150;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    max-width: none;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+            }
+        }
+
+        @media (max-width: 900px) and (min-width: 500px) {
+            #notfoundIndex {
+                height: calc(100vh - 172px);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h8 {
+                    font-size: 96px;
+                    line-height: 128px;
+                    text-align: start;
+                    font-family: "JetBrains Mono", monospace;
+                    font-weight: 100;
+                    font-variant-ligatures: none;
+                    color: var(--on-background);
+                }
+
+                h8::selection {
+                    color: var(--on-background);
+                    font-weight: 150;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    max-width: none;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            #notfoundIndex {
+                height: calc(100vh - 172px);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h8 {
+                    font-size: 72px;
+                    line-height: 96px;
+                    text-align: center;
+                    font-family: "JetBrains Mono", monospace;
+                    font-weight: 100;
+                    font-variant-ligatures: none;
+                    margin-left: 0px;
+                    color: var(--on-background);
+                    width: 100%;
+                    display: block;
+                }
+
+                h8::selection {
+                    color: var(--on-background);
+                    font-weight: 150;
+                }
+
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    max-width: none;
+                    flex-direction: column;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+
+        #notfoundIndex {
+            div {
+                h2 {
+                    margin: 0;
+                }
+            }
+
+            p {
+                span {
+                    background-color: var(--default-background);
+                    color: var(--on-background);
+                    padding: 2px 6px;
+                    border-radius: 6px;
+                    font-family: "JetBrains Mono", monospace;
+                    font-size: 14px;
+                }
+
+                span::selection {
+                    color: var(--primary-color);
+                    font-weight: 500;
+                }
+            }
+        }
     </style>
     <div id="content">
         <header>
