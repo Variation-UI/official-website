@@ -31,7 +31,7 @@ main {
   margin: 1.2rem;
   padding: 4rem 8rem;
 
-  background-color: var(--background-light);
+  background-color: var(--default-background);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 
@@ -63,7 +63,7 @@ main {
   bottom: 0;
 }
 
-.card__icon {
+.card_icon {
   font-size: 2rem;
 
   padding: 1rem;
@@ -75,7 +75,7 @@ main {
   place-items: center;
 }
 
-.card__name {
+.card_name {
   font-weight: 400;
 
   transform: translate(-50%, -50%);

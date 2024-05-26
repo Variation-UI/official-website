@@ -27,6 +27,8 @@
         --on-background: #181818;
         --on-background-hover: #181818b4;
         --none-on-background: #18181800;
+        --btn-background: #afc9f300;
+        --btn-background-hover: #afc9f330;
     }
 }
 
@@ -40,6 +42,8 @@
         --on-background: #FFFFFF;
         --on-background-hover: #FFFFFFb4;
         --none-on-background: #FFFFFF00;
+        --btn-background: #ffffff00;
+        --btn-background-hover: #ffffff30;
     }
 }
 
@@ -124,4 +128,10 @@ li {
 
 iframe {
     border: none;
+}
+
+button {
+    border: none;
+    padding: unset;
+    margin: unset;
 }

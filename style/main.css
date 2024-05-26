@@ -1,3 +1,8 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 #pagetitle {
     display: flex;
     gap: 28px;
@@ -157,6 +162,14 @@ h1 {
             background-image: url(../sources/intro-dark.png);
         }
     }
+
+    .logo {
+        svg {
+            .punctuate {
+                fill: var(--lighter-color)
+            }
+        }
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -165,13 +178,35 @@ h1 {
             background-image: url(../sources/intro-light.png);
         }
     }
+
+    .logo {
+        svg {
+            .punctuate {
+                fill: var(--secondary-color)
+            }
+        }
+    }
 }
 
 @media (min-width: 900px) {
 
     #pagetitle,
-    .authors {
+    .authors,
+    .changelogs {
         padding: 50px;
+        border-radius: 18px;
+        margin: 20px;
+        font-size: 64px;
+
+        p {
+            line-height: 30px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+    }
+
+    #collapsibleBtn {
+        padding: 35px 50px;
         border-radius: 18px;
         margin: 20px;
         font-size: 64px;
@@ -227,12 +262,22 @@ h1 {
     }
 
     .logo {
-        background-image: url(../sources/logo-desktop.png);
-        height: 52px;
-        width: 260px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        height: 50px;
+        width: 270px;
+
+        svg {
+            height: 31px;
+            width: 268px;
+
+            .text {
+                fill: var(--on-background);
+                opacity: 1;
+            }
+
+            .punctuate {
+                opacity: 1;
+            }
+        }
     }
 
     h1 {
@@ -245,7 +290,9 @@ h1 {
 @media (max-width: 900px) and (min-width: 500px) {
 
     #pagetitle,
-    .authors {
+    .authors,
+    #collapsibleBtn,
+    .changelogs {
         padding-top: 1em;
         padding-bottom: 1em;
         padding-left: 20px;
@@ -323,7 +370,9 @@ h1 {
 @media (max-width: 500px) {
 
     #pagetitle,
-    .authors {
+    .authors,
+    #collapsibleBtn,
+    .changelogsd {
         padding-top: 1em;
         padding-bottom: 1em;
         padding-left: 20px;
