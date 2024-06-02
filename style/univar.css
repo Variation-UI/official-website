@@ -20,6 +20,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --main-background: #f8fbff;
+        --main-background-00: #f8fbff00;
         --menu-background: #fcfdff;
         --default-background: #E1E7F0;
         --menu-main-background: #f8fbffbb;

@@ -3,9 +3,9 @@ header {
     justify-content: space-between;
     position: fixed;
     top: 0px;
-    left: 0px;
     z-index: 6;
     font-family: Wix Madefor Display, sans-serif;
+    align-items: center;
 
     #downloadBtn {
         fill: var(--on-background);
@@ -78,9 +78,13 @@ header {
 
 @media (min-width: 900px) {
     header {
-        padding: 20px 72px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 72px;
+        padding-right: 72px;
         backdrop-filter: blur(40px);
         width: calc(100% - 144px);
+        max-width: 1440px;
 
         #design {
             #hoverMenuBox {
@@ -164,7 +168,10 @@ header {
 
 @media (max-width: 900px) {
     header {
-        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         background-color: #00000880;
         backdrop-filter: blur(40px);
         width: calc(100% - 40px);
@@ -253,7 +260,10 @@ header {
     }
 
     header {
-        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         width: calc(100% - 40px);
         width: calc(100% - 40px);
 

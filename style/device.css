@@ -1,0 +1,545 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-background: #f8fbff;
+        --none-main-background: #f8fbff00;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background: #000008;
+        --none-main-background: #00000800;
+    }
+}
+
+@keyframes headerbg {
+    from {
+        padding-bottom: 20px;
+        /* border-bottom: solid 1px #86868a00; */
+    }
+
+    to {
+        padding-bottom: 80px;
+        /* border-bottom: solid 1px #86868a2d */
+    }
+}
+
+header {
+    animation: headerbg 3s linear;
+    animation-timeline: scroll(root y);
+    animation-range-end: normal 200px;
+}
+
+#downloadPageHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: headerbg 3s linear;
+    z-index: 7;
+    position: fixed;
+    margin-top: -14px;
+
+    h2 {
+        color: var(--on-background);
+        margin: 0;
+        font-size: 26px;
+        user-select: none;
+    }
+
+    path {
+        fill: var(--on-background-hover);
+        transform: rotate(90deg) translate(0px, -18px);
+        transition: all .3s ease-in-out;
+    }
+
+
+}
+
+.backBtn {
+    appearance: none;
+    background: var(--btn-background);
+    border: none;
+    padding: 8px;
+    margin-left: -8px;
+    margin-top: 5px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    width: max-content;
+    height: max-content;
+}
+
+.backBtn:hover {
+    background: var(--btn-background-hover);
+
+    path {
+        fill: var(--on-background);
+        transform: rotate(90deg) translate(0px, -18px);
+    }
+}
+
+#statusIcon {
+    user-select: none;
+}
+
+/* 为用于打开和关闭可折叠内容的按钮设置样式 */
+.collapsible {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    color: #FFFFFF;
+
+    h5 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Wix Madefor Display", sans-serif;
+    }
+}
+
+.collContentEnd {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    width: -moz-fit-content;
+    justify-content: flex-end;
+
+    p {
+        color: #FFFFFF;
+        opacity: .75;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Wix Madefor Display", sans-serif;
+        margin: 0;
+        line-height: 16px;
+    }
+}
+
+.collContentStart {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    p {
+        color: #FFFFFF;
+        opacity: .75;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: "JetBrains Mono", monospace;
+        margin: 0;
+        line-height: 16px;
+    }
+}
+
+.infoCard {
+    background-color: var(--primary-color-50);
+    cursor: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+
+    h5 {
+        color: var(--on-background);
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Wix Madefor Display", sans-serif;
+    }
+}
+
+/* #collapsibleBtn:active {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+} */
+
+#toggler:checked+#collapsibleBtn .menubutton {
+    .top {
+        transition: all .3s ease-in-out;
+        transform: rotate(45deg) scaleX(1.25);
+        translate: 5.5px -3px;
+        fill: var(--on-background);
+    }
+
+    .bottom {
+        transition: all .3s ease-in-out;
+        transform: rotate(135deg) scaleX(1.25);
+        translate: 25px 9.75px;
+        fill: var(--on-background);
+    }
+}
+
+.menubutton {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    display: block;
+    overflow: visible;
+    z-index: 8;
+
+    .top {
+        transition: all .3s ease-in-out;
+        transform: rotate(0deg);
+        translate: 0px 0px;
+        fill: var(--on-background);
+    }
+
+    .bottom {
+        transition: all .3s ease-in-out;
+        transform: rotate(0deg);
+        translate: 0px 0px;
+        fill: var(--on-background);
+    }
+}
+
+/* 如果单击按钮，则为按钮添加背景颜色（使用 JS 添加 .active 类），并且当您将鼠标移到按钮上时（悬停） */
+.active,
+.collapsible:hover {
+    background-color: var(--primary-color);
+}
+
+/* 设置可折叠内容的样式。 注意：默认隐藏 */
+.changelogs {
+    padding: 0;
+    margin-top: -10;
+    transform: scaleY(0);
+    transform-origin: center 0px;
+    opacity: 0;
+    overflow: hidden;
+    background-color: var(--default-background);
+    border-radius: 8px 8px 18px 18px;
+    transition: all .2s ease-in-out;
+    height: 0px;
+
+    #mdBox {
+        /* padding: 0; */
+        margin: 0;
+    }
+}
+
+.fold {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+p[info] {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+    color: var(--on-background);
+    user-select: none;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 350;
+    margin: 0;
+    color: var(--on-background);
+}
+
+.infoContent {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.infoContentBox {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+}
+
+#deviceinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.headshot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.maintainerName,
+.maintainerID {
+    margin: 0;
+    line-height: normal;
+}
+
+.maintainerID {
+    font-family: Wix Madefor Display;
+    padding-right: 4px;
+}
+
+.maintainerID,
+#VersionCodeName,
+.updateTime {
+    opacity: 0.75;
+    font-size: 14px;
+    margin: 0;
+}
+
+#VersionCodeName {
+    font-weight: 250;
+    padding-bottom: 1.5px;
+    font-family: JetBrains Mono;
+}
+
+.maintainerName {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#VersionName {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.VersionInfo {
+    display: flex;
+    color: var(--on-background)
+}
+
+.maintainedContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.maintainerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+    color: var(--on-background)
+}
+
+.maintainerInfoBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--on-background);
+    background-color: var(--main-background);
+    transition: all .3s ease-in-out;
+    border-radius: 28px;
+    padding: 3px;
+    font-weight: 400;
+    user-select: none;
+    width: max-content;
+}
+
+.maintainerInfoBox:hover {
+    background-color: var(--default-background);
+    font-weight: 600;
+}
+
+#infoCard {
+    background: unset;
+}
+
+.infoFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.model {
+    font-size: 32px;
+    font-weight: 550;
+}
+
+@media (min-width: 600px) {
+    .devicePhoto {
+        width: 58%;
+        max-width: 512px;
+        margin-top: -16%;
+        margin-bottom: -114px;
+        align-self: end;
+    }
+
+    .model {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .devicePhoto {
+        width: 256px;
+        margin-top: 32px;
+        margin-bottom: -12px;
+        align-self: end;
+    }
+}
+
+.statusIcon,
+#statusIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.statusInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    h3 {
+        margin: 0;
+        color: var(--on-background)
+    }
+}
+
+.statusInfoBox {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+#statusText {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.md5 {
+    font-size: 20px;
+    font-weight: 250;
+    opacity: 1;
+    font-family: JetBrains Mono;
+    width: calc(100% - 30px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.md5Content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+button {
+    background: unset;
+    transition: all .1s ease-in-out;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+
+    path {
+        fill: var(--on-background-hover);
+        transition: all .3s ease-in-out;
+    }
+}
+
+button:hover {
+    path {
+        fill: var(--primary-color)
+    }
+}
+
+.btnBox {
+    display: flex;
+    margin-left: -10px;
+
+    button {
+        height: fit-content;
+        height: -moz-fit-content;
+        background-color: var(--primary-color-50);
+        transition: all .2s ease-in;
+        border-radius: 32px;
+        padding: 24px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        p[start] {
+            font-family: Wix Madefor Display;
+            color: #FFFFFF;
+            opacity: 1;
+            margin: 0;
+            width: 164px;
+            text-align: start;
+        }
+
+        path {
+            fill: #FFFFFF;
+        }
+    }
+
+    button:hover {
+        height: fit-content;
+        height: -moz-fit-content;
+        background-color: var(--primary-color);
+        border-radius: 16px;
+    }
+
+    button:disabled {
+        height: 68px;
+        background-color: var(--btn-background);
+        transition: all .5s ease-in;
+
+        path {
+            fill: #86868a;
+            transition: all .3s ease-in-out;
+        }
+
+        .Info {
+            h3 {
+                margin: 0;
+                color: #86868a;
+                font-size: 16px;
+            }
+    
+            p {
+                margin: 0;
+                color: #86868a;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.changelog {
+    font-family: JetBrains Mono;
+    font-size: 14px;
+    font-weight: 250;
+    color: var(--on-background);
+    line-height: 22px;
+}
