@@ -28,9 +28,10 @@ div[flex] {
     display: flex;
     gap: 28px;
 
-    p {
+    p[footer] {
         color: var(--on-background);
-        line-height: 24px;
+        line-height: 22px;
+        font-size: 14px;
     }
 }
 
@@ -91,6 +92,10 @@ div[menu] {
 .text {
     fill: var(--on-background);
     opacity: 0.6;
+}
+
+.punctuate {
+    fill: var(--lighter-color)
 }
 
 .md_halvingline {
