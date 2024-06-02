@@ -189,6 +189,7 @@ h1 {
 }
 
 @media (min-width: 900px) {
+
     #pagetitle,
     .authors,
     .changelogs {
@@ -251,7 +252,9 @@ h1 {
     .btnBox {
         flex-direction: row;
 
-        button, button:hover, button:disabled {
+        button,
+        button:hover,
+        button:disabled {
             width: fit-content;
             width: -moz-fit-content;
         }
@@ -366,7 +369,9 @@ h1 {
     .btnBox {
         flex-direction: row;
 
-        button, button:hover, button:disabled {
+        button,
+        button:hover,
+        button:disabled {
             width: fit-content;
             width: -moz-fit-content;
         }
@@ -395,12 +400,17 @@ h1 {
     }
 
     .logo {
-        background-image: url(../sources/logo-desktop.png);
         height: 52px;
         width: 260px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+
+        svg {
+            height: 32px;
+            width: 275px;
+
+            path {
+                opacity: 1;
+            }
+        }
     }
 
     h1 {
@@ -411,6 +421,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
+
     #pagetitle,
     .authors,
     .changelogsd {
@@ -466,12 +477,16 @@ h1 {
             align-items: center;
 
             .logo {
-                background-image: url(../sources/logo-phone.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
                 height: 44px;
-                width: 275px;
+
+                svg {
+                    height: 28px;
+                    width: 275px;
+
+                    path {
+                        opacity: 1;
+                    }
+                }
             }
         }
 
@@ -484,7 +499,9 @@ h1 {
         flex-direction: column;
         gap: 8px;
 
-        button, button:hover, button:disabled {
+        button,
+        button:hover,
+        button:disabled {
             width: calc(100% + 10px);
         }
 
