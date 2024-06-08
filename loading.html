@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Material Design 风格下的进度条加载动画实现</title>
+    <style>
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background-color: #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4caf50;
+            transition: width 0.3s ease-in-out;
+            animation: progress-bar-animation 1.5s linear infinite;
+        }
+
+        @keyframes progress-bar-animation {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        function simulateLoading() {
+            var progress = 0;
+            var interval = setInterval(function () {
+                progress += Math.random() * 10;
+                if (progress > 100) {
+                    clearInterval(interval);
+                } else {
+                    document.querySelector(".progress-bar").style.width = progress + "%";
+                }
+            }, 500);
+        }
+        simulateLoading();
+    </script>
+</body>
+
+</html>
