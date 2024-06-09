@@ -12,31 +12,10 @@
     }
 }
 
-@keyframes headerbg {
-    from {
-        padding-bottom: 20px;
-        /* border-bottom: solid 1px #86868a00; */
-    }
-
-    to {
-        padding-bottom: 80px;
-        /* border-bottom: solid 1px #86868a2d */
-    }
-}
-
-header {
-    animation: headerbg 3s linear;
-    animation-timeline: scroll(root y);
-    animation-range-end: normal 200px;
-}
-
 #downloadPageHeader {
     display: flex;
     align-items: center;
     gap: 12px;
-    animation: headerbg 3s linear;
-    z-index: 7;
-    position: fixed;
     margin-top: -14px;
 
     h2 {
@@ -194,29 +173,6 @@ header {
     }
 }
 
-.menubutton {
-    width: 18px;
-    height: 18px;
-    position: relative;
-    display: block;
-    overflow: visible;
-    z-index: 8;
-
-    .top {
-        transition: all .3s ease-in-out;
-        transform: rotate(0deg);
-        translate: 0px 0px;
-        fill: var(--on-background);
-    }
-
-    .bottom {
-        transition: all .3s ease-in-out;
-        transform: rotate(0deg);
-        translate: 0px 0px;
-        fill: var(--on-background);
-    }
-}
-
 /* 如果单击按钮，则为按钮添加背景颜色（使用 JS 添加 .active 类），并且当您将鼠标移到按钮上时（悬停） */
 .active,
 .collapsible:hover {
@@ -282,6 +238,10 @@ h2 {
     flex-direction: column;
     gap: 28px;
     opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+footer {
     transition: all .5s ease-in-out;
 }
 
@@ -547,12 +507,12 @@ button:hover {
 }
 
 .loader {
-        position: fixed;
-        width: 40px;
-        align-self: center;
-        left: calc(50% - 20px);
-        top: calc(50% - 20px);
-        transition: all .3s ease-in-out;
+    position: fixed;
+    width: 40px;
+    align-self: center;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    transition: all .3s ease-in-out;
 
     &:before {
         content: '';

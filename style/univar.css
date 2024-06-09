@@ -23,8 +23,9 @@
         --main-background-00: #f8fbff00;
         --menu-background: #fcfdff;
         --default-background: #E1E7F0;
-        --menu-main-background: #f8fbffbb;
-        --menu-default-background: #E1E7F0bb;
+        --none-background: #ffffff00;
+        --menu-main-background: linear-gradient(#f8fbff, #f8fbffbb);
+        --menu-default-background: linear-gradient(#E1E7F0, #E1E7F0bb);
         --on-background: #181818;
         --on-background-hover: #181818b4;
         --none-on-background: #18181800;
@@ -38,8 +39,9 @@
         --main-background: #000008;
         --menu-background: #10101d;
         --default-background: #02041A;
-        --menu-main-background: #000008bb;
-        --menu-default-background: #02041Abb;
+        --none-background: #00000000;
+        --menu-main-background: linear-gradient(#000008, #000008bb);
+        --menu-default-background: linear-gradient(#02041a, #02041Abb);
         --on-background: #FFFFFF;
         --on-background-hover: #FFFFFFb4;
         --none-on-background: #FFFFFF00;
@@ -135,4 +137,9 @@ button {
     border: none;
     padding: unset;
     margin: unset;
+}
+
+img {
+    border: none;
+    user-select: none;
 }

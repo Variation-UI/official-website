@@ -1,55 +1,37 @@
+const header = document.querySelector("header");
+const checkbox = document.querySelector("input");
+
 window.onload = function () {
     var lastScrollTop = 0;
-    const header = document.querySelector("header");
 
     window.addEventListener("scroll", function () {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
             header.style.top = "-69px"
+            header.style.opacity = "0"
         } else {
             header.style.top = "0px"
+            header.style.opacity = "1"
         }
-        // if (scrollTop < '256px'){
-        //     header.style.top = "-69px"
-        // } else {
-        //     header.style.top = "0px"
-        // }
+        if (lastScrollTop >= '256') {
+            header.style.background = "var(--menu-main-background)"
+            header.style.backdropFilter = "blur(40px)"
+        } else {
+            header.style.background = "var(--none)"
+            header.style.backdropFilter = "blur(0px)"
+        }
         lastScrollTop = scrollTop;
 
         // console.log(document.documentElement.scrollTop);
     });
+};
 
-    function LoadingClass() {
-        this.wrap = jQuery(".mmd-loading-wrap");
-        this.run = function () {
-            this.wrap.each(function (i) {
-
-                //计算圆圈的宽度
-                var bw = Math.round($(this).width() / 15);
-                var w = $(this).width() - 2 * bw;
-                //通过自定义属性得到圆圈的颜色
-                var circleColor = $(this).attr("circleColor");
-
-                //动态生成圆圈。即将上一个版本中html的代码搬移到js中，减低html代码使用量
-                var div = "<div class='mmd-loading-circle-layout'>"
-                    + "<div class='mmd-loading-layout-left'>"
-                    + "<div class='mmd-loading-circle-left'"
-                    + "style='width:" + w + "px;height:" + w + "px;border-width:" + bw + "px;border-color:" + circleColor + ";"
-                    + "border-left:" + bw + "px solid transparent;" + "border-bottom:" + bw + "px solid transparent;'" + "></div>"
-                    + "</div>"
-                    + "<div class='mmd-loading-layout-right'>"
-                    + "<div class='mmd-loading-circle-right'"
-                    + "style='width:" + w + "px;height:" + w + "px;border-width:" + bw + "px;border-color:" + circleColor + ";"
-                    + "border-right:" + bw + "px solid transparent;" + "border-top:" + bw + "px solid transparent;'" + "></div>"
-                    + "</div>"
-                    + "</div>";
-                $(this).append(div);
-            });
-        }
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.style.overflow = "hidden"
+        header.style.top = "0px"
+    } else {
+        document.body.style.overflow = "auto"
+        header.style.top = "0px"
     }
-    //自动运行
-    (function () {
-        var loading = new LoadingClass();
-        loading.run();
-    })();
-}
+});

@@ -1,3 +1,31 @@
+.menubutton {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    overflow: visible;
+    z-index: 8;
+
+    .top {
+        transition: all .3s ease-in-out;
+        transform: rotate(0deg);
+        translate: 0px 0px;
+        fill: var(--on-background);
+    }
+
+    .bottom {
+        transition: all .3s ease-in-out;
+        transform: rotate(0deg);
+        translate: 0px 0px;
+        fill: var(--on-background);
+    }
+}
+
+label {
+    transform: scaleX(1);
+    position: static;
+    z-index: 8;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -6,11 +34,11 @@ header {
     z-index: 6;
     font-family: Wix Madefor Display, sans-serif;
     align-items: center;
-    transition: all .3s ease-in-out;
-
-    #downloadBtn {
-        fill: var(--on-background);
-    }
+    margin: 0;
+    transition: all .3s cubic-bezier(0.50, 0.15, 0.5, 0.85);
+    background: var(--none-background);
+    backdrop-filter: blur(0px);
+    opacity: 1;
 
     #logo {
         svg {
@@ -67,103 +95,14 @@ header {
     display: none;
 }
 
-.menubutton {
-    .top {
-        display: block;
-    }
-
-    .bottom {
-        display: block;
-    }
-}
-
 @media (min-width: 900px) {
     header {
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 72px;
         padding-right: 72px;
-        backdrop-filter: blur(40px);
         width: calc(100% - 144px);
         max-width: 1440px;
-
-        #design {
-            #hoverMenuBox {
-                transform: scaleY(0);
-                transition: all .4s cubic-bezier(1, 0, 0, 1);
-                position: absolute;
-                width: auto;
-                display: flex;
-                /* left: 0; */
-                margin-left: -196px;
-                top: 35px;
-                align-items: center;
-                justify-content: center;
-                padding: 16px 20px;
-                gap: 48px;
-                border-radius: 16px;
-
-                li {
-                    color: var(--none-on-background);
-                    transition: all .3s ease-in-out;
-                    text-transform: uppercase;
-                    border-bottom: solid 1px var(--none-on-background);
-                }
-            }
-        }
-
-        #design:hover {
-
-            #hoverMenuBox {
-                opacity: 1;
-                transform: scaleY(1);
-                position: absolute;
-                background-color: var(--menu-background);
-                top: 50px;
-
-                li {
-                    color: var(--on-background);
-                    border-bottom: solid 1px var(--none-on-background);
-                }
-
-                li:hover {
-                    color: var(--primary-color);
-                    border-bottom: solid 1px var(--primary-color);
-                }
-            }
-        }
-
-        #arrow {
-            position: fixed;
-            display: none;
-        }
-
-        .menubutton {
-            width: 18px;
-            height: 18px;
-            position: fixed;
-            display: none;
-        }
-
-        .menu {
-            div {
-                letter-spacing: 2px;
-            }
-        }
-
-        label {
-            transform: scaleX(1);
-            position: fixed;
-        }
-
-        .menu {
-            width: 648px;
-            color: var(--on-background)cc;
-        }
-
-        .menuHoverBar {
-            display: block;
-        }
     }
 }
 
@@ -173,93 +112,11 @@ header {
         padding-bottom: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        background-color: #00000880;
-        backdrop-filter: blur(40px);
         width: calc(100% - 40px);
-
-        #hoverMenuBox {
-            display: none;
-        }
-
-        #arrow {
-            position: fixed;
-            display: none;
-        }
-
-        .menubutton {
-            width: 18px;
-            height: 18px;
-            position: fixed;
-            display: none;
-        }
-
-        label {
-            transform: scaleX(1);
-            position: fixed;
-        }
-
-        .menu {
-            width: 512px;
-        }
-
-        .menuHoverBar {
-            display: block;
-        }
-
-        #design {
-            #hoverMenuBox {
-                transition: all .4s cubic-bezier(1, 0, 0, 1);
-                position: absolute;
-                width: auto;
-                display: flex;
-                /* left: 0; */
-                margin-left: -196px;
-                top: 35px;
-                align-items: center;
-                justify-content: center;
-                padding: 16px 20px;
-                gap: 48px;
-                border-radius: 16px;
-
-                li {
-                    color: var(--none-on-background);
-                    transition: all .3s ease-in-out;
-                    text-transform: uppercase;
-                    border-bottom: solid 1px var(--none-on-background);
-                }
-            }
-        }
-
-        #design:hover {
-
-            #hoverMenuBox {
-                opacity: 1;
-                transform: scaleY(1);
-                position: absolute;
-                background-color: var(--menu-background);
-                top: 50px;
-
-                li {
-                    color: var(--on-background);
-                    border-bottom: solid 1px var(--none-on-background);
-                }
-
-                li:hover {
-                    color: var(--primary-color);
-                    border-bottom: solid 1px var(--primary-color);
-                }
-            }
-        }
     }
 }
 
 @media (max-width: 500px) {
-    #toggler:checked~.menu {
-        transform: scaleY(1);
-        opacity: 1;
-        fill: var(--on-background);
-    }
-
     header {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -267,144 +124,139 @@ header {
         padding-right: 20px;
         width: calc(100% - 40px);
         width: calc(100% - 40px);
+    }
+}
 
-        label {
-            transform: scaleX(1);
-            position: static;
-            z-index: 8;
+svg {
+    z-index: 8;
+}
+
+.menuHoverBar {
+    display: none;
+}
+
+#toggler:checked~.menu {
+    transform: scaleY(1);
+    opacity: 1;
+    fill: var(--on-background);
+}
+
+#toggler:checked+.hamberger-btn span:nth-child(1) {
+    transform: scale(0.75) rotate(45deg);
+    top: 8px;
+    width: 22px;
+    margin-left: -2px;
+    transition: width .5s ease-in-out, margin-left .5s ease-in-out, transform .25s ease-in-out .5s, top .25s ease-in-out .25s;
+}
+
+#toggler:checked+.hamberger-btn span:nth-child(2) {
+    transform: scale(0.75) rotate(-45deg);
+    top: 6px;
+    width: 22px;
+    margin-left: -2px;
+    transition: width .5s ease-in-out, margin-left .5s ease-in-out, transform .25s ease-in-out .5s, top .25s ease-in-out .25s;
+}
+
+.hamberger-btn {
+    display: block;
+    height: 18px;
+    width: 18px;
+    user-select: none;
+}
+
+.hamberger-btn span {
+    transform: scale(0.75) rotate(0deg);
+    display: block;
+    height: 2px;
+    width: 18px;
+    top: 4px;
+    margin-left: 0px;
+    position: relative;
+    background-color: var(--on-background);
+    user-select: none;
+    transition: width .5s ease-in-out, margin-left .5s ease-in-out, transform .25s ease-in-out .25s, top .25s ease-in-out .5s;
+}
+
+.hamberger-btn span:nth-child(2) {
+    top: 9px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(100% - 64px);
+    height: calc(100vh - 104px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    padding: 72px 32px 32px 32px;
+    gap: 24px;
+    transform: scaleY(0);
+    transition: all .4s cubic-bezier(1, 0, 0, 1);
+    transform-origin: center 0px;
+    background-color: var(--default-background);
+
+    .menuli {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 30px;
+        opacity: 0.8;
+        transition: all .3s ease-in-out 0ms;
+        border: none;
+
+        #hoverMenuBox {
+            margin-top: 186px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 20px 0px;
+            transform: scaleY(0);
+            transform-origin: center 0px;
+            opacity: 0;
+            transition: all .3s cubic-bezier(1, 0, 0, 1);
+            margin-left: 0px;
+            top: 0px;
+
+            li {
+                display: flex;
+                letter-spacing: 0;
+                font-size: 20px;
+            }
         }
+    }
 
-        .menubutton {
-            width: 18px;
-            height: 18px;
-            position: relative;
-            display: block;
-            overflow: visible;
-            z-index: 8;
+    .menuli:hover {
+        opacity: 1;
+        border: none;
+    }
 
-            .top {
-                transition: all .3s ease-in-out;
-                transform: rotate(0deg);
-                translate: 0px 0px;
-                fill: var(--on-background);
-            }
-
-            .bottom {
-                transition: all .3s ease-in-out;
-                transform: rotate(0deg);
-                translate: 0px 0px;
-                fill: var(--on-background);
-            }
+    #design {
+        #arrow {
+            transform: rotate(0turn);
+            transition: all .3s ease-in-out 0s;
         }
+    }
 
-        #toggler:checked+label .menubutton {
-            .top {
-                transition: all .3s ease-in-out;
-                transform: rotate(45deg) scaleX(1.25);
-                translate: 5.5px -3px;
-                fill: var(--on-background);
-            }
-
-            .bottom {
-                transition: all .3s ease-in-out;
-                transform: rotate(135deg) scaleX(1.25);
-                translate: 25px 9.75px;
-                fill: var(--on-background);
-            }
-        }
+    #design:hover {
+        padding-bottom: 136px;
 
         #arrow {
             position: static;
             display: block;
-            fill: var(--on-background);
+            transform: rotate(0.25turn);
+            transition: all .3s ease-in-out 0s;
         }
 
-        svg {
-            z-index: 8;
-        }
-
-        .menuHoverBar {
-            display: none;
-        }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: calc(100% - 40px);
-            height: calc(100vh - 78px);
-            position: fixed;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            padding: 58px 20px 20px 20px;
-            gap: 24px;
-            transform: scaleY(0);
-            transition: all .4s cubic-bezier(1, 0, 0, 1);
-            transform-origin: center 0px;
-            background-color: var(--default-background);
-
-            .menuli {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 24px;
-                line-height: 30px;
-                opacity: 0.8;
-                transition: all .3s ease-in-out 0ms;
-                border: none;
-
-                #hoverMenuBox {
-                    margin-top: 186px;
-                    position: fixed;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 14px;
-                    padding: 20px 0px;
-                    transform: scaleY(0);
-                    transform-origin: center 0px;
-                    opacity: 0;
-                    transition: all .3s cubic-bezier(1, 0, 0, 1);
-                    margin-left: 0px;
-                    top: 0px;
-
-                    li {
-                        display: flex;
-                        letter-spacing: 0;
-                        font-size: 20px;
-                    }
-                }
-            }
-
-            .menuli:hover {
-                opacity: 1;
-                border: none;
-            }
-
-            #design {
-                #arrow {
-                    transform: rotate(0turn);
-                    transition: all .3s ease-in-out 0s;
-                }
-            }
-
-            #design:hover {
-                padding-bottom: 136px;
-
-                #arrow {
-                    position: static;
-                    display: block;
-                    transform: rotate(0.25turn);
-                    transition: all .3s ease-in-out 0s;
-                }
-
-                #hoverMenuBox {
-                    opacity: 1;
-                    transform: scaleY(1);
-                    margin-left: 0px;
-                    top: 0px;
-                }
-            }
+        #hoverMenuBox {
+            opacity: 1;
+            transform: scaleY(1);
+            margin-left: 0px;
+            top: 0px;
         }
     }
 }
